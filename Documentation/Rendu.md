@@ -1,5 +1,6 @@
-# Recommandations ANSSI
-1. A mettre en oeuvre:
+# Rendu Projet Journalisation
+## Recommandations de l'ANSSI
+1. Choix de mise en oeuvre:
    - Journalisation native Linux (rsyslog)
    - Synchronisation temporelle des systèmes (NTP)
    - Horodatage des journaux (Format Homogène)
