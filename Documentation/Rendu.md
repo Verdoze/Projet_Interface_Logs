@@ -17,3 +17,12 @@
     - Collecter et superviser les logs des postes nomades, même en situation de mobilité via VPN.
     - Cloisonner physiquement les serveurs de collecte dans une zone dédiée du SI d’administration
     - Recours à des outils et pratiques avancées : L’utilisation d’outils professionnels de détection avancée ou la simulation d’attaques complexes (DetectionLab, Atomic Red Team).
+
+
+## Définition des tâches : 
+1. Definir les attentes et besoins
+2. Prendre connaissance des recommandations de l'ANSSI
+3. Installer les VMs Debian ->  sous VMWare
+4. Réaliser diagramme des cas d'usage
+5. Installer les outils sur les VMs
+6. Réalisation du diagramme synoptique
