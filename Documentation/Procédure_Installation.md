@@ -9,3 +9,4 @@ apt install sudo apt install rsyslog -y
 
 ![alt text](image-1.png)
 
+apt-get install lvm2
