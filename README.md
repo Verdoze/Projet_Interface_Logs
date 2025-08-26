@@ -1,9 +1,9 @@
 # Projet_Interface_Logs
 
-VM LOG = 192.168.86.130 
+VM LOG = 172.16.4.66
 user1  Admin1..1
 root   Admin1..1
 
-VM WEB = 192.168.86.131
+VM WEB = 172.16.4.65
 user1  Admin1..1
 root   Admin1..1
