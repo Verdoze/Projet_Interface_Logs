@@ -20,21 +20,13 @@
 
 
 ## Tâches à réaliser : 
-| Récolter les logs | Présenter les données | Livrer une documentation |
+| Récolter les logs | Présenter les logs | Fournir une documentation |
 |-----------|:---------:|----------:|
 | Prendre connaissance des recommandations de l'ANSSI | Creation de la sitemap | Diagramme cas d'usage |
 | Installer 2 VMs Debian | Réalisation d'un mockup | Diagramme en blocs |
 | Configuration rsyslog | Connecter la BDD avec php | Diagramme synoptique |
-| Installation MySQL | Création page de connection | null |
+| Installation MySQL | Création page de connection | Procédure d'installation VM |
 | Configuration de la BDD | Création page de consultation | null |
+| Formatage des logs | null | null |
+| Insertion des logs en BDD | null | null |
 | null | null | null |
-| null | null | null |
-| null | null | null |
-
-
-####1. Definir les attentes et besoins
-2. Prendre connaissance des recommandations de l'ANSSI
-3. Installer les VMs Debian ->  sous VMWare
-4. Réaliser diagramme des cas d'usage
-5. Installer les outils sur les VMs
-6. Réalisation du diagramme synoptique####
