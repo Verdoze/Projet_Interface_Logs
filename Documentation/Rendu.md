@@ -25,7 +25,7 @@
 | Prendre connaissance des recommandations de l'ANSSI | Creation de la sitemap | Diagramme cas d'usage |
 | Installer 2 VMs Debian | Réalisation d'un mockup | Diagramme en blocs |
 | Configuration rsyslog | Connecter la BDD avec php | Diagramme synoptique |
-| Installation MySQL | Création page de connection | Procédure d'installation VM |
+| Installation MariaDB | Création page de connection | Procédure d'installation VM |
 | Configuration de la BDD | Création page de consultation | Test de validation |
 | Formatage des logs | null | Creation d'un git |
 | Insertion des logs en BDD | null | null |
