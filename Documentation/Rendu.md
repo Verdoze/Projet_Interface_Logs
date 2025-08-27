@@ -10,8 +10,13 @@
   
 2. Trop complexe ou long pour mise en oeuvre
    - Architecture hiérarchique avec serveurs de collecte intermédiaires et centraux, meilleure répartition de  la charge,facilite la gestion multi-sites.
+<<<<<<< Updated upstream
    - Recour à un prestataire de détection d’incidents qualifié (PDIS) pour l’externalisation du stockage ou la corrélation des logs.   
    - Adapter et faire évoluer les politiques de journalisation/détection en continu
+=======
+   - Recours à un prestataire de détection d’incidents qualifié (PDIS) pour l’externalisation du stockage ou la corrélation des logs.
+   - Adapter et faire évoluer les politiques de journalisation/détection en continue
+>>>>>>> Stashed changes
   
 3. Ne souhaite pas mettre en oeuvre
     - Collecter et superviser les logs des postes nomades, même en situation de mobilité via VPN.
