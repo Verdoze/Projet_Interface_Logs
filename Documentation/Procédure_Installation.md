@@ -9,4 +9,17 @@ apt install sudo apt install rsyslog -y
 
 ![alt text](image-1.png)
 
-apt-get install lvm2
+* coté serveur :
+
+```bash
+apt install sudo apt install rsyslog -y
+```
+* crée un fichier server.conf, autorisé les flux tcp sur le port 514.
+
+![alt text](image-4.png)
+
+* redemarrer le service.
+
+```bash
+systemctl restart rsyslog
+```
