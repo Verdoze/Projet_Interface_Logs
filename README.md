@@ -12,4 +12,6 @@ cmd     ssh user1@172.16.4.65
 BDD Syslog / User: rsyslog / MDP : rsyslogpwd01
 
 Site Web : 
-Accès utilisateur : logadm Admin1..1
+Accès utilisateur : \
+- logadm Admin1..1 
+- test@gmail.com  test
