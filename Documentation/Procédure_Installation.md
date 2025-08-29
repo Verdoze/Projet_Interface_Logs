@@ -34,13 +34,15 @@ sudo apt install chrony -y
 ```bash
 pool 0.pool.ntp.org iburst
 allow 172.16.4.0/24 
-
 ```
+![alt text](image.png)
 
 * dans la vm log faire pareil crée un fichier dans /etc/chrony/chrony.conf
 
 ```bash
 server 172.16.4.65 iburst 
 ```
+![alt text](image-4.png)
+
 ne pas oublier de redemarrer chrony
 systemctl restart chrony
