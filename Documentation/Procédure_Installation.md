@@ -46,3 +46,54 @@ server 172.16.4.65 iburst
 
 ne pas oublier de redemarrer chrony
 systemctl restart chrony
+
+---
+## Procédure d’installation NGINX PHP et PHP-FPM
+
+```bash
+apt install nginx php php-fpm 
+
+cd /etc/nginx/sites-enabled
+nano log.conf
+
+#création du fichier nginx
+server {
+  listen 80 default_server;
+  server_name _;
+
+  root /var/www/log/public;
+  index index.php;
+
+  client_max_body_size 2m;
+
+  location / {
+    try_files $uri /$uri /index.php?$query_string;
+  }
+
+  location ~ \.php$ {
+    include snippets/fastcgi-php.conf;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    fastcgi_pass unix:/run/php/php8.4-fpm.sock;  # adapte selon ta version >  }
+}
+
+#Création des dossiers et fichiers php
+
+cd /var/www/log
+mkdir -p config inc public
+touch config/.env \
+      inc/db.php inc/auth.php \
+      public/index.php public/login.php public/logout.php public/logs.php public/export.php
+
+#Créer un lien symbolique pour activer le site 
+ sudo ln -s /etc/nginx/sites-available/log.conf  /etc/nginx/sites-enabled/
+      
+#Mettre les droits utilisateurs php/nginx 
+chown -R www-data:www-data /var/www/log/
+
+#Tester la conf & Reload nginx
+nginx -t
+systemctl reload nginx
+
+#Vérifier le fonctionnement 
+http://172.16.4.65
+```
