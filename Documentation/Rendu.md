@@ -119,12 +119,12 @@ Mettre en place une collecte centralisée des logs de CNF vers une VM dédiée, 
 | Arthur          | Yanis              | Enzo                     |
 | --------------- | ------------------ | ------------------------ |
 | Analyse Anssi   | Répartition charge | Analyse Anssi            |
-| Conf Rsyslog    | Diagramme UML      | Procédure d’installation |
+| Conf Rsyslog    | Diagramme UML      | Procédure d’installation BDD|
 | Conf NTP        | Synoptique         | Cahier de tests          |
 | Application PHP | Sitemap            | Application PHP          |
 | Mockup          | Application PHP    | Configuration BDD        |
 | Diaporama       | Conf Nginx         | Diaporama                |
-| Github          | Diaporama          | Gihub                    |
+| Procédure installation rsyslog, nginx, php          | Diaporama          | Github                    |
 
 ## Liste de matériels :
 
@@ -136,7 +136,6 @@ Mettre en place une collecte centralisée des logs de CNF vers une VM dédiée, 
 - PHP
 - MariaDB
 - Rsyslog
-- Application générant log
 
 ---
 

@@ -1,5 +1,14 @@
 # Test de validation
+### Rappel des cas d'usage
 
+![UseCase Diagram](Diagramme/diagram%20usecase.png)
+
+Il est donc attendu de pouvoir : 
+```
+- Consulter les logs
+- Filtrer les logs
+- Exporter les logs
+```
 ## Connexion
 La connexion est réfusée si l'identifiant ou le mot de passe n'est pas bon.
 
