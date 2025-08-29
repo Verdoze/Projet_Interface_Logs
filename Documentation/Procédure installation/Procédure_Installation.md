@@ -9,7 +9,7 @@ apt install sudo apt install rsyslog -y
 - crée un fichier pour le client example client.conf
   se rendre dans les fichier /etc/rsyslog.d/client.conf autorisé les flux sur le port 514 (port de base pour rsyslog) vers la machine contenant la BDD.
 
-![alt text](/Projet_Interface_Logs/Documentation/Img/conf%20rsyslog%20VM%20WEB.png)
+![alt text](../Img/conf%20rsyslog%20VM%20WEB.png)
 
 - coté serveur :
 
