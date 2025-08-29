@@ -69,17 +69,15 @@ Mettre en place une collecte centralisée des logs de CNF vers une VM dédiée, 
 
 - Les logs de l’application CNF sont lus et envoyés instantanément à la VM de l’application de consultation de log. (collecte de log)
 - Interface web php permettant de consulter et filtrer les logs sur l’application php.
-- La gestion du stockage temporaire des logs entre la VM LOG et la VM APP
-- Administration des utilisateurs
+- Restreindre l’accès aux utilisateurs autorisés
 
 ---
 
 ## Critères de performance :
 
-- Affichage des logs en moins de 20 secondes
+- Affichage des logs en moins de 5 secondes- 
+- Filtrage des logs réponse en moins de 5 secondes
 - Synchronisation de l’heure (ntp)
-- Traçabilité des accès
-- Filtrage des logs réponse en moins de 15 secondes
 
 ---
 
