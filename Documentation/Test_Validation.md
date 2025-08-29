@@ -9,34 +9,36 @@ Il est donc attendu de pouvoir :
 - Filtrer les logs
 - Exporter les logs
 ```
-## Connexion
-La connexion est réfusée si l'identifiant ou le mot de passe n'est pas bon.
+## Consulter les logs
+### Action : l'utilisateur doit se connecter pour accéder à la page de logs:
 
-![Refus de connexion](img/connexionrefusee.png "Refus de connexion")
+![Refus de connexion](img/connexion.png "Refus de connexion")
 
-Si les identifiants sont bons, l'utilisateur peut accéder à la page de visualisation des logs :
+Si les identifiants sont bons, l'utilisateur accède à la page de visualisation des logs :
 
 ![Accès page log](img/accespagelog.png "Accès à la page de logs")
 
-## Différents filtres
-Il est possible d'appliquer différents filtres :
-- En fonction de la date:
+## Filtrer les logs
+### Action : Appliquer un filtre de date
 ![Filtre Date](img/filtredate.png "")
-- En fonction de l'application qui génère le log:
+### Action : Appliquer un filtre d'application
 ![Filtre Application](img/filtreapp.png "")
-- En fonction de la vm d'origine du log
+### Action : Appliquer un filtre de VM
 ![Filtre Hote](img/filtrevm.png "")
-- En fonction du niveau de criticité:
+### Action : Appliquer un filtre de niveau de criticité
 ![Filtre Niveau](img/filtreniveau.png "")
-- En effectuant une recherche textuelle:
+### Action : Appliquer une recherche textuelle
 ![Filtre Texte](img/filtretext.png "")
 
-## Export de la liste des logs
-Il doit être possible de télécharger un csv de la liste des logs : 
+## Exporter la liste des logs
+### Action : cliquer sur l'export des logs
+![Bouton Export](img/boutonexport.png "")
+
+### Action : récupérer le fichier csv
 ![Download CSV](img/downloadcsv.png "")
 
-Il est ensuite possible d'exporter ces données dans un tableur.
+### Action : exporter le fichier dans une application tableur
 ![Export CSV](img/exportcsv.png "")
 
-Et de visualiser les données.
+### Action : visualiser les données
 ![Classeur](img/classeur.png "")
