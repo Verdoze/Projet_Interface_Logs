@@ -1,4 +1,3 @@
-
 # Analyse des recommandations ANSSI
 
 Dans le cadre du projet, nous avons étudié les recommandations de l’ANSSI relatives à la journalisation.  
@@ -10,14 +9,14 @@ Toutes n’ont pas été retenues : certaines ont été mises en œuvre car simp
 
 Nous avons choisi d’appliquer en priorité les recommandations les plus essentielles et simples à intégrer :
 
-- **Journalisation native** : l’application CNF génère déjà des logs, et nous utilisons **rsyslog** pour assurer leur collecte et leur transfert.  
-- **Horodatage homogène** : les logs sont normalisés en **UTC/ISO 8601**, ce qui permet de corréler les événements sur plusieurs systèmes.  
-- **Synchronisation temporelle (NTP)** : les deux VMs utilisent **NTP** pour garantir la cohérence des horodatages.  
-- **Centralisation** : les journaux sont collectés et stockés sur une VM dédiée, distincte de l’application.  
-- **Transfert fiable et sécurisé** : nous avons retenu **TCP/HTTP(S)** pour éviter la perte de messages et protéger le flux avec un **token d’ingestion**.  
-- **Stockage indexé** : la base **MariaDB** conserve les événements avec des index sur les champs principaux (date, niveau, application).  
-- **Rotation et rétention** : un mécanisme de purge simple supprime les logs au-delà de **90 jours** pour maîtriser l’espace disque.  
-- **Gestion des accès** : seuls **rsyslog** et l’application PHP peuvent écrire en base, et la consultation des journaux est protégée par **authentification**.  
+- **Journalisation native** : l’application CNF génère déjà des logs, et nous utilisons **rsyslog** pour assurer leur collecte et leur transfert.
+- **Horodatage homogène** : les logs sont normalisés en **UTC/ISO 8601**, ce qui permet de corréler les événements sur plusieurs systèmes.
+- **Synchronisation temporelle (NTP)** : les deux VMs utilisent **NTP** pour garantir la cohérence des horodatages.
+- **Centralisation** : les journaux sont collectés et stockés sur une VM dédiée, distincte de l’application.
+- **Transfert fiable et sécurisé** : nous avons retenu **TCP/HTTP(S)** pour éviter la perte de messages et protéger le flux avec un **token d’ingestion**.
+- **Stockage indexé** : la base **MariaDB** conserve les événements avec des index sur les champs principaux (date, niveau, application).
+- **Rotation et rétention** : un mécanisme de purge simple supprime les logs au-delà de **90 jours** pour maîtriser l’espace disque.
+- **Gestion des accès** : seuls **rsyslog** et l’application PHP peuvent écrire en base, et la consultation des journaux est protégée par **authentification**.
 
 Ces points couvrent la majorité des besoins fonctionnels et garantissent un minimum de sécurité et de conformité, tout en restant réalistes dans le délai imparti.
 
@@ -27,10 +26,10 @@ Ces points couvrent la majorité des besoins fonctionnels et garantissent un min
 
 Certaines recommandations de l’ANSSI nécessitent une architecture plus lourde ou des outils spécialisés :
 
-- **Architecture hiérarchisée de collecte** (plusieurs niveaux de collecteurs) : pertinente en production multi-sites, mais trop lourde pour un projet en 2 VMs.  
-- **Analyse de risques approfondie** sur le mode de transfert : hors périmètre du projet étudiant.  
-- **Durcissement avancé** (SI cloisonné, partitions disque dédiées) : difficile à mettre en place dans un contexte limité en temps.  
-- **Surveillance automatique de l’espace disque** : nous avons prévu seulement une vérification manuelle.  
+- **Architecture hiérarchisée de collecte** (plusieurs niveaux de collecteurs) : pertinente en production multi-sites, mais trop lourde pour un projet en 2 VMs.
+- **Analyse de risques approfondie** sur le mode de transfert : hors périmètre du projet étudiant.
+- **Durcissement avancé** (SI cloisonné, partitions disque dédiées) : difficile à mettre en place dans un contexte limité en temps.
+- **Surveillance automatique de l’espace disque** : nous avons prévu seulement une vérification manuelle.
 
 ---
 
@@ -38,14 +37,14 @@ Certaines recommandations de l’ANSSI nécessitent une architecture plus lourde
 
 Enfin, certaines recommandations ne concernent pas notre projet :
 
-- **Journalisation des postes nomades** (VPN, mobilité).  
-- **Recours à un PDIS** (prestataire qualifié ANSSI) pour externalisation ou corrélation avancée.  
-- **Interconnexions avec d’autres SI** ou collectes multi-domaines.  
-- **Détection avancée et simulation d’attaques** (EDR, Red Team).  
-
+- **Journalisation des postes nomades** (VPN, mobilité).
+- **Recours à un PDIS** (prestataire qualifié ANSSI) pour externalisation ou corrélation avancée.
+- **Interconnexions avec d’autres SI** ou collectes multi-domaines.
+- **Détection avancée et simulation d’attaques** (EDR, Red Team).
 
 ---
-## Contexte : 
+
+## Contexte :
 
 Nous avons une application web qui génère des log (notre application cnf) basé sur angular et nodeJS et nous devons déporter les logs sur une autre machine que celle qui héberge l’application pour des raisons de sécurité (selon les recommandations de l’anssi)
 
@@ -57,7 +56,8 @@ Il faut avoir accès aux logs pour les personnes ayant les privilèges élevés 
 
 ---
 
-## Objectif principal : 
+## Objectif principal :
+
 Mettre en place une collecte centralisée des logs de CNF vers une VM dédiée, avec une interface web permettant la recherche, la consultation.
 
 ---
@@ -80,7 +80,7 @@ Mettre en place une collecte centralisée des logs de CNF vers une VM dédiée, 
 
 ---
 
-## Contraintes techniques : 
+## Contraintes techniques :
 
 - 2 VM, une de collecte de log et une applicative
 - Utilisation de PHP
@@ -93,38 +93,38 @@ Mettre en place une collecte centralisée des logs de CNF vers une VM dédiée, 
 ## Liste des livrables & leurs tâches:
 
 - Une documentation du projet explicatif
-    - Analyse Anssi (Enzo, Arthur)
-    - Procédure installation (Enzo)
-    - Doc utilisateurs (Enzo)
-    - Cahier de tests (Enzo)
+  - Analyse Anssi (Enzo, Arthur)
+  - Procédure installation (Enzo)
+  - Doc utilisateurs (Enzo)
+  - Cahier de tests (Enzo)
 - La documentation technique du projet
-    - Répartition de la charge (Yanis)
-    - Diagramme UML (Yanis)
-    - Synoptique (Yanis)
-    - Sitemap et mockup (Yanis)
+  - Répartition de la charge (Yanis)
+  - Diagramme UML (Yanis)
+  - Synoptique (Yanis)
+  - Sitemap et mockup (Yanis)
 - La programmation et la configuration système
-    - Application PHP (Arthur, Yanis, Enzo)
-    - Schéma de BDD (Arthur, Enzo)
-    - Configuration Nginx (Yanis)
-    - Configuration Rsyslog (Arthur)
-    - Configuration NTP (Arthur)
+  - Application PHP (Arthur, Yanis, Enzo)
+  - Schéma de BDD (Arthur, Enzo)
+  - Configuration Nginx (Yanis)
+  - Configuration Rsyslog (Arthur)
+  - Configuration NTP (Arthur)
 - Le diaporama (Yanis , Enzo, Arthur)
 - Repo Github (Enzo, Yanis, Arthur)
-    - Contenu de tout le projet + réalisation de l’application
+  - Contenu de tout le projet + réalisation de l’application
 
 ---
 
-## Tableau de répartition des tâches : 
+## Tableau de répartition des tâches :
 
-| Arthur | Yanis | Enzo |
-| --- | --- | --- |
-| Analyse Anssi | Répartition charge | Analyse Anssi |
-| Conf Rsyslog | Diagramme UML | Procédure d’installation |
-| Conf NTP | Synoptique | Cahier de tests |
-| Application PHP | Sitemap & Mockup | Application PHP |
-| Diagramme UML | Application PHP | Configuration BDD |
-| Diaporama | Conf Nginx | Diaporama |
-| Github | Diaporama | Gihub |
+| Arthur          | Yanis              | Enzo                     |
+| --------------- | ------------------ | ------------------------ |
+| Analyse Anssi   | Répartition charge | Analyse Anssi            |
+| Conf Rsyslog    | Diagramme UML      | Procédure d’installation |
+| Conf NTP        | Synoptique         | Cahier de tests          |
+| Application PHP | Sitemap            | Application PHP          |
+| Mockup          | Application PHP    | Configuration BDD        |
+| Diaporama       | Conf Nginx         | Diaporama                |
+| Github          | Diaporama          | Gihub                    |
 
 ## Liste de matériels :
 
@@ -156,12 +156,10 @@ Mettre en place une collecte centralisée des logs de CNF vers une VM dédiée, 
 
 ![image.png](/Documentation/Diagramme/synoptique%20fonctionnement.png)
 
-
-## Sitemap : 
+## Sitemap :
 
 ![image.png](/Documentation/Diagramme/sitemap.png)
 
-
-## Mockup : 
+## Mockup :
 
 ![image.png](/Documentation/Diagramme/mockup.png)
