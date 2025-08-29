@@ -1,3 +1,6 @@
+# Prérequis 
+![Extensions Prérequis](img/Extensions.png)
+
 # Analyse des recommandations ANSSI
 
 Dans le cadre du projet, nous avons étudié les recommandations de l’ANSSI relatives à la journalisation.  
