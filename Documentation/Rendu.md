@@ -142,3 +142,8 @@ Mettre en place une collecte centralisée et sécurisée des logs de CNF vers un
 ## Synoptique :
 
 ![image.png](/Documentation/synoptique%20fonctionnement.png)
+
+
+## Sitemap : 
+
+![image.png](/Documentation/sitemap.png)
