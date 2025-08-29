@@ -144,23 +144,23 @@ Mettre en place une collecte centralisée des logs de CNF vers une VM dédiée, 
 
 ## UML Bloc
 
-![image.png](/Documentation/Diagramme/diagramme%20bloc%20uml.png)
+![image.png](Diagramme/diagramme%20bloc%20uml.png)
 
 ---
 
 ## UML Usecase
 
-![image.png](/Documentation/Diagramme/diagramme%20usecase%20last%20version.png)
+![image.png](Diagramme/diagramme%20usecase%20last%20version.png)
 ---
 
 ## Synoptique :
 
-![image.png](/Documentation/Diagramme/synoptique%20fonctionnement.png)
+![image.png](Diagramme/synoptique%20fonctionnement.png)
 
 ## Sitemap :
 
-![image.png](/Documentation/Diagramme/sitemap.png)
+![image.png](Diagramme/sitemap.png)
 
 ## Mockup :
 
-![image.png](/Documentation/Diagramme/mockup.png)
+![image.png](Diagramme/mockup.png)
