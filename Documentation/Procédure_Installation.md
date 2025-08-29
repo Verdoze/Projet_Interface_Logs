@@ -1,24 +1,27 @@
 # Procédure d'installation
+
 ## Installation VM de Log
 
 ```bash
 apt install sudo apt install rsyslog -y
 ```
-* crée un fichier pour le client example client.conf 
+
+- crée un fichier pour le client example client.conf
   se rendre dans les fichier /etc/rsyslog.d/client.conf autorisé les flux sur le port 514 (port de base pour rsyslog) vers la machine contenant la BDD.
 
-![alt text](image-1.png)
+![alt text](/Documentation/Img/conf%20rsyslog%20VM%20WEB.png)
 
-* coté serveur :
+- coté serveur :
 
 ```bash
 apt install sudo apt install rsyslog -y
 ```
-* crée un fichier server.conf, autorisé les flux tcp sur le port 514.
 
-![alt text](image-5.png)
+- crée un fichier server.conf, autorisé les flux tcp sur le port 514.
 
-* redemarrer le service.
+![alt text](/Documentation/Img/conf%20rsyslog%20VM%20LOGS.png))
+
+- redemarrer le service.
 
 ```bash
 systemctl restart rsyslog
@@ -29,29 +32,33 @@ systemctl restart rsyslog
 ```bash
 sudo apt install chrony -y
 ```
-* crée un fichier dans /etc/chrony/chrony.conf dans la vm ou il y a la bdd
+
+- crée un fichier dans /etc/chrony/chrony.conf dans la vm ou il y a la bdd
 
 ```bash
 pool 0.pool.ntp.org iburst
-allow 172.16.4.0/24 
+allow 172.16.4.0/24
 ```
-![alt text](image.png)
 
-* dans la vm log faire pareil crée un fichier dans /etc/chrony/chrony.conf
+![alt text](/Documentation/Img/conf%20chrony%20VmWeb.png)
+
+- dans la vm log faire pareil crée un fichier dans /etc/chrony/chrony.conf
 
 ```bash
-server 172.16.4.65 iburst 
+server 172.16.4.65 iburst
 ```
-![alt text](image-4.png)
+
+![alt text](/Documentation/Img/conf%20chrony%20VmLogs.png)
 
 ne pas oublier de redemarrer chrony
 systemctl restart chrony
 
 ---
+
 ## Procédure d’installation NGINX PHP et PHP-FPM
 
 ```bash
-apt install nginx php php-fpm 
+apt install nginx php php-fpm
 
 cd /etc/nginx/sites-enabled
 nano log.conf
@@ -84,16 +91,16 @@ touch config/.env \
       inc/db.php inc/auth.php \
       public/index.php public/login.php public/logout.php public/logs.php public/export.php
 
-#Créer un lien symbolique pour activer le site 
+#Créer un lien symbolique pour activer le site
  sudo ln -s /etc/nginx/sites-available/log.conf  /etc/nginx/sites-enabled/
-      
-#Mettre les droits utilisateurs php/nginx 
+
+#Mettre les droits utilisateurs php/nginx
 chown -R www-data:www-data /var/www/log/
 
 #Tester la conf & Reload nginx
 nginx -t
 systemctl reload nginx
 
-#Vérifier le fonctionnement 
+#Vérifier le fonctionnement
 http://172.16.4.65
 ```
