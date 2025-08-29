@@ -46,13 +46,13 @@ Enfin, certaines recommandations ne concernent pas notre projet :
 
 ## Contexte :
 
-Nous avons une application web qui génère des log (notre application cnf) basé sur angular et nodeJS et nous devons déporter les logs sur une autre machine que celle qui héberge l’application pour des raisons de sécurité (selon les recommandations de l’anssi)
+Nous avons une application qui nous permet de commander des instances. Les logs sont contenus sur le même serveur que l'application.
 
 ---
 
 ## Expression du besoin :
 
-Il faut avoir accès aux logs pour les personnes ayant les privilèges élevés sans besoin d’accéder à l’application pour pouvoir agir rapidement en cas de problème. Il faut donc que les serveurs soient synchronisés pour avoir les informations des côtés en même temps. Il faut gérer les accès des différents utilisateurs (admin, dev, tech)
+Nous avons une application web qui génère des log (notre application cnf) basé sur angular et nodeJS et nous devons déporter les logs sur une autre machine que celle qui héberge l’application pour des raisons de sécurité (selon les recommandations de l’anssi)
 
 ---
 
@@ -74,7 +74,7 @@ Mettre en place une collecte centralisée des logs de CNF vers une VM dédiée, 
 ## Critères de performance :
 
 - Affichage des logs en moins de 20 secondes
-- Synchronisation de l’heure en temps quasi réel (ntp)
+- Synchronisation de l’heure (ntp)
 - Traçabilité des accès
 - Filtrage des logs réponse en moins de 15 secondes
 
@@ -147,8 +147,7 @@ Mettre en place une collecte centralisée des logs de CNF vers une VM dédiée, 
 
 ## UML Usecase
 
-![image.png](/Documentation/Diagramme/diagram%20usecase.png)
-
+![image.png](/Documentation/Diagramme/diagramme%20usecase%20last%20version.png)
 ---
 
 ## Synoptique :
