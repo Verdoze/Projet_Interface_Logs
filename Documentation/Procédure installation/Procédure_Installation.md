@@ -9,7 +9,7 @@ apt install sudo apt install rsyslog -y
 - crée un fichier pour le client example client.conf
   se rendre dans les fichier /etc/rsyslog.d/client.conf autorisé les flux sur le port 514 (port de base pour rsyslog) vers la machine contenant la BDD.
 
-![alt text](/Documentation/Img/conf%20rsyslog%20VM%20WEB.png)
+![alt text](/Projet_Interface_Logs/Documentation/Img/conf%20rsyslog%20VM%20WEB.png)
 
 - coté serveur :
 
@@ -19,7 +19,7 @@ apt install sudo apt install rsyslog -y
 
 - crée un fichier server.conf, autorisé les flux tcp sur le port 514.
 
-![alt text](/Documentation/Img/conf%20rsyslog%20VM%20LOGS.png))
+![alt text](../Img/conf%20rsyslog%20VM%20LOGS.png)
 
 - redemarrer le service.
 
@@ -40,7 +40,7 @@ pool 0.pool.ntp.org iburst
 allow 172.16.4.0/24
 ```
 
-![alt text](/Documentation/Img/conf%20chrony%20VmWeb.png)
+![alt text](../Img/conf%20chrony%20VmWeb.png)
 
 - dans la vm log faire pareil crée un fichier dans /etc/chrony/chrony.conf
 
@@ -48,7 +48,7 @@ allow 172.16.4.0/24
 server 172.16.4.65 iburst
 ```
 
-![alt text](/Documentation/Img/conf%20chrony%20VmLogs.png)
+![alt text](../Img/conf%20chrony%20VmLogs.png)
 
 ne pas oublier de redemarrer chrony
 systemctl restart chrony
