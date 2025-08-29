@@ -107,11 +107,24 @@ Mettre en place une collecte centralisée des logs de CNF vers une VM dédiée, 
     - Schéma de BDD (Arthur, Enzo)
     - Configuration Nginx (Yanis)
     - Configuration Rsyslog (Arthur)
+    - Configuration NTP (Arthur)
 - Le diaporama (Yanis , Enzo, Arthur)
 - Repo Github (Enzo, Yanis, Arthur)
     - Contenu de tout le projet + réalisation de l’application
 
 ---
+
+## Tableau de répartition des tâches : 
+
+| Arthur | Yanis | Enzo |
+| --- | --- | --- |
+| Analyse Anssi | Répartition charge | Analyse Anssi |
+| Conf Rsyslog | Diagramme UML | Procédure d’installation |
+| Conf NTP | Synoptique | Cahier de tests |
+| Application PHP | Sitemap & Mockup | Application PHP |
+| Diagramme UML | Application PHP | Configuration BDD |
+| Diaporama | Conf Nginx | Diaporama |
+| Github | Diaporama | Gihub |
 
 ## Liste de matériels :
 
@@ -129,21 +142,26 @@ Mettre en place une collecte centralisée des logs de CNF vers une VM dédiée, 
 
 ## UML Bloc
 
-![image.png](/Documentation/diagramme%20bloc%20uml.png)
+![image.png](/Documentation/Diagramme/diagramme%20bloc%20uml.png)
 
 ---
 
 ## UML Usecase
 
-![image.png](/Documentation/Diagramme%20uml%20usecase.png)
+![image.png](/Documentation/Diagramme/diagram%20usecase.png)
 
 ---
 
 ## Synoptique :
 
-![image.png](/Documentation/synoptique%20fonctionnement.png)
+![image.png](/Documentation/Diagramme/synoptique%20fonctionnement.png)
 
 
 ## Sitemap : 
 
-![image.png](/Documentation/sitemap.png)
+![image.png](/Documentation/Diagramme/sitemap.png)
+
+
+## Mockup : 
+
+![image.png](/Documentation/Diagramme/mockup.png)
