@@ -58,7 +58,7 @@ Il faut avoir accès aux logs pour les personnes ayant les privilèges élevés 
 ---
 
 ## Objectif principal : 
-Mettre en place une collecte centralisée et sécurisée des logs de CNF vers une VM dédiée, avec une interface web permettant la recherche, la consultation.
+Mettre en place une collecte centralisée des logs de CNF vers une VM dédiée, avec une interface web permettant la recherche, la consultation.
 
 ---
 
@@ -90,7 +90,7 @@ Mettre en place une collecte centralisée et sécurisée des logs de CNF vers un
 
 ---
 
-## Liste des livrables :
+## Liste des livrables & leurs tâches:
 
 - Une documentation du projet explicatif
     - Analyse Anssi (Enzo, Arthur)
@@ -107,8 +107,8 @@ Mettre en place une collecte centralisée et sécurisée des logs de CNF vers un
     - Schéma de BDD (Arthur, Enzo)
     - Configuration Nginx (Yanis)
     - Configuration Rsyslog (Arthur)
-- Le diaporama (Yanis)
-- Repo Github (Enzo)
+- Le diaporama (Yanis , Enzo, Arthur)
+- Repo Github (Enzo, Yanis, Arthur)
     - Contenu de tout le projet + réalisation de l’application
 
 ---
